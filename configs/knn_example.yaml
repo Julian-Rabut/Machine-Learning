@@ -1,1 +1,7 @@
-
+# Example config for kNN baseline
+category: bottle
+image_size: 256
+batch_size: 32
+device: cpu
+metric: cosine
+seed: 42
