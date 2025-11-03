@@ -1,0 +1,2 @@
+category,method,auroc,average_precision,threshold_youden,accuracy,precision,recall,f1,roc_png,pr_png,confmat_png,top_png,fp_png,fn_png
+bottle,AE,0.7412698412698413,0.9177159855594326,0.0030929530039429,0.6867469879518072,0.9111111111111111,0.6507936507936508,0.7592592592592593,artifacts\bottle\roc_ae.png,artifacts\bottle\pr_ae.png,artifacts\bottle\confmat_ae.png,artifacts\bottle\top_ae.png,artifacts\bottle\Faux_positifs.png,artifacts\bottle\Faux_négatifs.png

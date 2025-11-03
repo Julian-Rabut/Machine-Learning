@@ -1,0 +1,2 @@
+category,method,auroc,average_precision,threshold_youden,accuracy,precision,recall,f1,roc_png,pr_png,confmat_png,top_png,fp_png,fn_png
+bottle,KNN,0.9944444444444444,0.9981765446147077,0.008304,0.9879518072289156,0.984375,1.0,0.9921259842519685,artifacts\bottle\roc_knn.png,artifacts\bottle\pr_knn.png,artifacts\bottle\confmat_knn.png,artifacts\bottle\top_knn.png,artifacts\bottle\Faux_positifs.png,
