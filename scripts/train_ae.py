@@ -1,25 +1,23 @@
 import argparse
-from pathlib import Path
-from src.methods.ae_recon import evaluate_autoencoder
+from src.methods.ae_recon import train_autoencoder
 
 if __name__ == "__main__":
-    p = argparse.ArgumentParser(description="Eval AE on MVTec test")
+    p = argparse.ArgumentParser(description="Train AE on MVTec train/good")
     p.add_argument("--data_root", type=str, required=True)
     p.add_argument("--category", type=str, required=True)
     p.add_argument("--image_size", type=int, default=256)
-    p.add_argument("--batch_size", type=int, default=8)
+    p.add_argument("--epochs", type=int, default=10)
+    p.add_argument("--batch_size", type=int, default=16)
+    p.add_argument("--lr", type=float, default=1e-3)
     p.add_argument("--device", type=str, default="cpu", choices=["cpu","cuda"])
-    p.add_argument("--ckpt", type=str, default=None, help="Path to artifacts/<cat>/ae.pth")
     args = p.parse_args()
 
-    if args.ckpt is None:
-        args.ckpt = str(Path("artifacts") / args.category / "ae.pth")
-
-    evaluate_autoencoder(
+    train_autoencoder(
         data_root=args.data_root,
         category=args.category,
-        ckpt_path=args.ckpt,
         image_size=args.image_size,
+        epochs=args.epochs,
         batch_size=args.batch_size,
+        lr=args.lr,
         device=args.device
     )
