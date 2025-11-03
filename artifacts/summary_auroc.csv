@@ -1,0 +1,4 @@
+category,auroc,csv
+bottle,0.9944444444444444,artifacts\bottle\results_eval.csv
+hazelnut,0.9600000000000001,artifacts\hazelnut\results_eval.csv
+cable,0.8744377811094453,artifacts\cable\results_eval.csv
